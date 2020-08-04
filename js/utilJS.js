@@ -24,17 +24,16 @@ function generateMixed(n) {
 var num = generateMixed(6);
 var p = document.getElementById('name')
 p.style.color = "#"+num;
-//去除音乐插件提示语
-var div1=document.getElementById("myhkTips");
-div1.remove();
+
 //切换title
 window.onblur = function() {//使用window触发onblur事件
-    document.title = "∑(っ°Д°;)っ卧槽，不见了!";//改变title内容
+    document.title = "∑(っ°Д°;)っ握草，不见了!";//改变title内容
 };
 window.onfocus = function() {//触发onfocus事件
-    document.title = "๑乛◡乛๑你来啦!";
+    document.title = "๑乛◡乛哦吼，又出现了!";
 };
 //让title动起来
+/**
 function scroll() {
     var titleInfo = document.title;
     var firstInfo = titleInfo.charAt(0);
@@ -42,3 +41,4 @@ function scroll() {
     document.title = lastInfo + firstInfo+"    ";
 }
 setInterval("scroll()", 500);
+**/
