@@ -40,5 +40,5 @@ function scroll() {
     var lastInfo = titleInfo.substring(1, titleInfo.length);
     document.title = lastInfo + firstInfo+"    ";
 }
-setInterval("scroll()", 500);
+setInterval("scroll()",5000);
 **/

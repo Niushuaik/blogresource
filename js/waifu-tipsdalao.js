@@ -60,7 +60,7 @@ $('.waifu-tool .fui-user').click(function (){
 });
 
 $('.waifu-tool .fui-info-circle').click(function (){
-    alert("那就加个企鹅号1229290378");
+    alert("那就加个qq1229290378");
     //window.open('https://www.cnblogs.com/hean/p/11167216.html');
 });
 
@@ -447,7 +447,7 @@ function loadModel(modelId, modelTexturesId){
     localStorage.setItem('modelId', modelId);
     if (modelTexturesId === undefined) modelTexturesId = 0;
     localStorage.setItem('modelTexturesId', modelTexturesId);
-    loadlive2d('live2d', 'https://cdn.jsdelivr.net/gh/Niushuaik/live2d-api2@latest/get/?id='+modelId+'-'+modelTexturesId, console.log('live2d','模型 '+modelId+'-'+modelTexturesId+' 加载完成'));
+    loadlive2d('live2d', '//live2d.fghrsh.net/api/get/?id='+modelId+'-'+modelTexturesId, console.log('live2d','模型 '+modelId+'-'+modelTexturesId+' 加载完成'));
 }
 
 function loadRandModel(){
@@ -458,7 +458,7 @@ function loadRandModel(){
 
     $.ajax({
         cache: false,
-        url: 'https://cdn.jsdelivr.net/gh/Niushuaik/live2d-api2@latest/'+modelTexturesRandMode+'_textures/?id='+modelId+'-'+modelTexturesId,
+        url: '//live2d.fghrsh.net/api/'+modelTexturesRandMode+'_textures/?id='+modelId+'-'+modelTexturesId,
         dataType: "json",
         success: function (result){
             loadModel(modelId, result.textures['id']);
@@ -473,7 +473,7 @@ function loadOtherModel(){
 
     $.ajax({
         cache: false,
-        url: 'https://cdn.jsdelivr.net/gh/Niushuaik/live2d-api2@latest/'+modelTexturesRandMode+'/?id='+modelId,
+        url: '//live2d.fghrsh.net/api/'+modelTexturesRandMode+'/?id='+modelId,
         dataType: "json",
         success: function (result){
             loadModel(result.model['id']);
