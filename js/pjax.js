@@ -72,7 +72,7 @@
             return null == a ? a + "" : "object" == typeof a || "function" == typeof a ? h[i.call(a)] || "object" : typeof a
         }, globalEval: function (b) {
             b && m.trim(b) && (a.execScript || function (b) {
-                a.eval.call(a, b)
+                //a.eval.call(a, b)  调用问题
             })(b)
         }, camelCase: function (a) {
             return a.replace(o, "ms-").replace(p, q)
