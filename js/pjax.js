@@ -72,7 +72,7 @@
             return null == a ? a + "" : "object" == typeof a || "function" == typeof a ? h[i.call(a)] || "object" : typeof a
         }, globalEval: function (b) {
             b && m.trim(b) && (a.execScript || function (b) {
-                //a.eval.call(a, b)  调用问题
+               //  a.eval.call(a, b)
             })(b)
         }, camelCase: function (a) {
             return a.replace(o, "ms-").replace(p, q)
@@ -2970,8 +2970,8 @@
                 state: pjax.state,
                 previousState: previousState
             })
-            context.html(container.contents)
-
+           //nsk context.html(container.contents)
+            context.html(data)
             // FF bug: Won't autofocus fields that are inserted via JS.
             // This behavior is incorrect. So if theres no current focus, autofocus
             // the last field.
