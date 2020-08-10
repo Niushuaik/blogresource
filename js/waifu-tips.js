@@ -447,7 +447,7 @@ function loadModel(modelId, modelTexturesId){
     localStorage.setItem('modelId', modelId);
     if (modelTexturesId === undefined) modelTexturesId = 0;
     localStorage.setItem('modelTexturesId', modelTexturesId);
-    loadlive2d('live2d', '//www.nsk666.fun/wp-content/themes/JieStyle-Two-master/live2d-api/get/?id='+modelId+'-'+modelTexturesId, console.log('live2d','模型 '+modelId+'-'+modelTexturesId+' 加载完成'));
+    loadlive2d('live2d', 'wp-content/themes/JieStyle-Two-master/live2d-api/get/?id='+modelId+'-'+modelTexturesId, console.log('live2d','模型 '+modelId+'-'+modelTexturesId+' 加载完成'));
 }
 
 function loadRandModel(){
@@ -458,7 +458,7 @@ function loadRandModel(){
 
     $.ajax({
         cache: false,
-        url: '//www.nsk666.fun/wp-content/themes/JieStyle-Two-master/live2d-api/'+modelTexturesRandMode+'_textures/?id='+modelId+'-'+modelTexturesId,
+        url: 'wp-content/themes/JieStyle-Two-master/live2d-api/'+modelTexturesRandMode+'_textures/?id='+modelId+'-'+modelTexturesId,
         dataType: "json",
         success: function (result){
             loadModel(modelId, result.textures['id']);
@@ -473,7 +473,7 @@ function loadOtherModel(){
 
     $.ajax({
         cache: false,
-        url: '//www.nsk666.fun/wp-content/themes/JieStyle-Two-master/live2d-api/'+modelTexturesRandMode+'/?id='+modelId,
+        url: 'wp-content/themes/JieStyle-Two-master/live2d-api/'+modelTexturesRandMode+'/?id='+modelId,
         dataType: "json",
         success: function (result){
             loadModel(result.model['id']);
